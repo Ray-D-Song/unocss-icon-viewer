@@ -1,0 +1,38 @@
+{
+  "name": "@unocss-icon-viewer/library",
+  "scripts": {
+    "start": "watch \"npm run build\" ./src",
+    "build": "mitosis build --c mitosis.config.cjs",
+    "lint": "eslint",
+    "vite:build": "vite build"
+  },
+  "type": "module",
+  "exports": {
+    "./react": {
+      "default": "./dist/react.js",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs",
+      "types": "./dist/react/src/index.d.ts"
+    },
+    "./vue": {
+      "default": "./dist/vue.js",
+      "import": "./dist/vue.js",
+      "require": "./dist/vue.cjs",
+      "types": "./dist/vue/src/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "@builder.io/eslint-plugin-mitosis": "^0.0.15",
+    "@builder.io/mitosis": "latest",
+    "@builder.io/mitosis-cli": "latest",
+    "eslint": "^8.51.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "unocss": "^0.61.9",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.1",
+    "watch": "^1.0.2"
+  }
+}
